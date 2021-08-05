@@ -23,8 +23,6 @@ def fad_unpack():
             NoneData = F.read( int('c', 16 ) )
             NextPos = F.tell()
 
-            print( NextPos, DataName.hex() )
-
             F.seek( unpack('<l', DataOffset )[0] )
             tempData = F.read( unpack('<l', DataSize )[0] )
 
